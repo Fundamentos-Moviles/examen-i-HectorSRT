@@ -1,3 +1,4 @@
+import 'package:examen1_cahs/more_info.dart';
 import 'package:flutter/material.dart';
 import 'package:examen1_cahs/utils/constants.dart' as con;
 
@@ -101,7 +102,7 @@ class _HomeState extends State<Home> {
                                           ),
                                           const SizedBox(height: 10),
                                           Text(
-                                            datos[2], // Título de la actividad
+                                            datos[2], // Título
                                             style: const TextStyle(
                                               fontSize: 24,
                                               fontWeight: FontWeight.bold,
@@ -109,7 +110,7 @@ class _HomeState extends State<Home> {
                                           ),
                                           const SizedBox(height: 10),
                                           Text(
-                                            datos[3], // Descripción de la actividad
+                                            datos[3], // Descripción
                                             style: const TextStyle(
                                               fontSize: 16,
                                             ),
@@ -118,7 +119,6 @@ class _HomeState extends State<Home> {
                                           Row(
                                             children: [
                                               Spacer(),
-                                              // Estrellas amarillas
                                               ...List.generate(
                                                 estrellas,
                                                     (index) => Icon(
@@ -126,7 +126,6 @@ class _HomeState extends State<Home> {
                                                   color: Colors.yellowAccent[700],
                                                 ),
                                               ),
-                                              // Estrellas grises
                                               ...List.generate(
                                                 5 - estrellas,
                                                     (index) => Icon(
@@ -173,17 +172,22 @@ class _HomeState extends State<Home> {
                                   children: [
                                     ElevatedButton(
                                       onPressed: () {
-                                        // Lógica para "Ver más"
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) => MoreInfo(),
+                                          ),
+                                        );
                                       },
                                       style: ElevatedButton.styleFrom(
                                         backgroundColor: const Color(0xFF52A486),
                                         minimumSize: const Size(180, 50),
                                       ),
                                       child: Row(
-                                        mainAxisSize: MainAxisSize.min, // Para ajustar el tamaño al contenido
+                                        mainAxisSize: MainAxisSize.min,
                                         children: [
                                           const Icon(Icons.edit, color: Colors.white),
-                                          const SizedBox(width: 8), // Espacio entre el ícono y el texto
+                                          const SizedBox(width: 8),
                                           const Text(
                                             'Ver más',
                                             style: TextStyle(
@@ -268,6 +272,7 @@ class _HomeState extends State<Home> {
       duration: Duration(seconds: duracion),
       action: SnackBarAction(
         onPressed: () {
+
         },
         label: 'Cerrar',
       ),

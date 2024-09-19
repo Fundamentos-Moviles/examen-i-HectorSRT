@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 const List listaExamen = [
   '1 # 4 # Comprar pastel # Pasar a la pastelería para comprar un pastel de chocolate # 2',
   '2 # 5 # Lavar el auto # Llevar el auto al lavado para limpieza completa # 4',
@@ -12,3 +14,13 @@ const List listaExamen = [
   '11 # 14 # Hacer jardinería # Podar las plantas y regar el jardín # 3',
   '12 # 15 # Planificar la semana # Organizar el calendario y las tareas para la próxima semana # 5',
 ];
+
+const fondo = Color(0xFF004A4F);
+const fondo2 = Color(0xFF005963);
+const fondo3 = Color(0xFF003740);
+const fondo4 = Color(0xFF00AEAE);
+const titulos = Color(0xFF908600);
+const botones = Color(0xFFDC7500);
+const textoBlanco = Color(0xFFFFFFFF);
+const error = Color(0xFFFF0000);
+const efectoBlancoOpaco = Color(0x66FFFFFF);

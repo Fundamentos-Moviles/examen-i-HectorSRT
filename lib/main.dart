@@ -1,5 +1,6 @@
 import 'package:examen1_cahs/home.dart';
 import 'package:examen1_cahs/login.dart';
+import 'package:examen1_cahs/more_info.dart';
 import 'package:flutter/material.dart';
 
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Login(),
+      home: Login(),
     );
   }
 }
