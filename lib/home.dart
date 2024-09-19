@@ -268,13 +268,11 @@ class _HomeState extends State<Home> {
       duration: Duration(seconds: duracion),
       action: SnackBarAction(
         onPressed: () {
-          // Cualquier acción al dar clic sobre el widget
         },
         label: 'Cerrar',
       ),
     );
 
-    // Muestra el SnackBar usando ScaffoldMessenger
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
 
