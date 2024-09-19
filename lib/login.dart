@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:examen1_cahs/home.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -175,7 +176,6 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                     SizedBox(height: size.height * .025),
-
                     // Muestra el mensaje de error
                     if (errorMessage.isNotEmpty)
                       Padding(
@@ -185,7 +185,6 @@ class _LoginState extends State<Login> {
                           style: TextStyle(color: Colors.red),
                         ),
                       ),
-
                     SizedBox(height: size.height * .025),
                     SizedBox(
                       width: size.width * 0.63,
@@ -201,12 +200,17 @@ class _LoginState extends State<Login> {
                               errorMessage = 'Contraseña incorrecta';
                             } else {
                               errorMessage = '';
-                              print('Iniciando sesión...');
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Home(),
+                                ),
+                              );
                             }
                           });
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.deepOrangeAccent,
+                          backgroundColor: Color(0xffdc7500),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20),
                           ),
